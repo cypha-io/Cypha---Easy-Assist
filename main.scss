@@ -1,0 +1,18 @@
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+    def handle_command(command):
+    if "hello" in command:
+        speak("Hello! How can I assist you today?")
+        
+    elif "time" in command:
+        current_time = datetime.now().strftime("%H:%M:%S")
+        speak(f"The current time is {current_time}.")
+        
+    elif "date" in command:
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        speak(f"Today is {current_date}.")
+        
+    else:
+        speak("Sorry, I didn't understand that command.")
